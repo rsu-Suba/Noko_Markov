@@ -29,12 +29,12 @@ function startbtn() {
 }
 async function mainfunc() {
    s.className = "main";
-   document.getElementById(v[0]).style.opacity = 1;
+   document.getElementById(v[0]).style.zIndex = 1;
    document.getElementById(v[0]).play();
    await sleep(370);
    p.textContent = "し";
    videooff();
-   document.getElementById(v[1]).style.opacity = 1;
+   document.getElementById(v[1]).style.zIndex = 1;
    document.getElementById(v[1]).play();
    await sleep(170);
    for (let i = 0; i < t[c].length; i++) {
@@ -60,10 +60,10 @@ async function mainfunc() {
             g = "Ka";
          } else if (i == 2) {
             g = `No${h}`;
-            h++;
          } else if (i == 3) {
             if (f == 2) {
                g = `Ko${h}`;
+            h++;
                if (h >= 3) h = 1;
             } else {
                g = `Ko`;
@@ -79,9 +79,9 @@ async function mainfunc() {
             g = "Drum";
          }
          videooff();
-         document.getElementById(g).style.opacity = 1;
-         document.getElementById(g).currentTime = 0;
+         document.getElementById(g).style.zIndex = 1;
          document.getElementById(g).play();
+         document.getElementById(g).currentTime = 0;
          c = i;
          f = i;
          i = -1;
@@ -95,6 +95,6 @@ async function mainfunc() {
 
 function videooff() {
    for (let num = 0; num < v.length; num++) {
-      document.getElementById(v[num]).style.opacity = 0;
+      document.getElementById(v[num]).style.zIndex = 0;
    }
 }
