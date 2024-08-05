@@ -33,9 +33,10 @@ async function mainfunc() {
    document.getElementById(v[0]).play();
    await sleep(370);
    p.textContent = "し";
-   document.getElementById(v[1]).style.opacity = 1;
    videooff();
+   document.getElementById(v[1]).style.opacity = 1;
    document.getElementById(v[1]).play();
+   await sleep(170);
    for (let i = 0; i < t[c].length; i++) {
       b += t[c][i];
       if (b > a) {
